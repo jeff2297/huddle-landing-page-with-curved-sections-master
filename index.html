@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Huddle landing page with curved sections</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@700&family=Poppins:wght@700&family=Rubik&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@700&family=Open+Sans&family=Poppins:wght@700&family=Rubik&display=swap');
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      color: red;
+      position: relative;
+      display: flex;
+      top: -15rem
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+      position: relative;
+    }
+
+    .attribution p {
+      color: white;
+      position: relative;
+      top: 10rem
+    }
+
+    .body {
+      font-family: 'Open Sans', sans-serif
+    }
+
+    header {
+      position: relative;
+      top: 40px
+    }
+
+    #header-button {
+      display: flex;
+      position: relative;
+      float: right;
+      width: 8%;
+      padding: 5px;
+      justify-content: center;
+      border: 1px solid hsl(321, 100%, 78%);
+      border-radius: 10px;
+      background-color: white;
+      color: hsl(321, 100%, 78%);
+
+    }
+
+    .section1 {
+      position: relative;
+      top: 5rem
+    }
+
+    .section1 h1 {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .section1 p {
+      display: flex;
+      position: relative;
+      text-align: center;
+      width: 30%;
+      left: 26rem;
+      top: -10px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .section1 button {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(322, 100%, 66%);
+      color: white;
+      border-radius: 20px;
+      border: 1px solid white;
+      height: 40px;
+      width: 20%;
+      left: 30rem;
+      font-family: 'Open Sans', sans-serif;
+      box-shadow: 2px 2px 1px rgb(218, 215, 215);
+    }
+
+    .section1 img {
+      display: flex;
+      position: relative;
+      width: 57%;
+      left: 16rem;
+      top: 6rem;
+    }
+
+    .section1-subsection {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      top: 100px;
+      left: -13rem;
+    }
+
+    .section1-subsection1 {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      margin: 80px;
+    }
+
+    .section1-subsection h1 {
+      display: flex;
+      position: relative;
+      left: 13rem;
+      font-size: 57px;
+    }
+
+    .section1-subsection img {
+      display: flex;
+      position: relative;
+      top: -10px;
+
+    }
+
+    .section1-subsection p {
+      display: flex;
+      position: relative;
+      width: 100%;
+      left: 4rem;
+      top: 7rem;
+      opacity: 0.6;
+    }
+
+    .section2 {
+      position: relative;
+      top: 10rem
+    }
+
+    .section2 h1 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .section2 p {
+      width: 36%;
+      text-align: left;
+    }
+
+    .section2-subsection1 {
+      display: flexbox;
+    }
+
+    .section2-subsection1 h1 {
+      display: flex;
+      position: relative;
+      left: 7rem;
+      top: -31rem
+    }
+
+    .section2-subsection1 p {
+      display: flex;
+      position: relative;
+      left: 7rem;
+      top: -31rem
+    }
+
+    #section2-subsection1-pic1 {
+      position: relative;
+      top: 10px;
+    }
+
+    #section2-subsection1-pic2 {
+      display: flex;
+      position: relative;
+      top: -18rem;
+      left: 55rem
+    }
+
+    .section2-subsection2 {
+      position: relative;
+      top: 8rem;
+      left: 3rem
+    }
+
+    .section2-subsection2 h1 {
+      display: flex;
+      position: relative;
+      left: 52rem;
+      top: -20rem
+    }
+
+    .section2-subsection2 p {
+      display: flex;
+      position: relative;
+      left: 52rem;
+      top: -37rem
+    }
+
+    #section2-subsection2-pic1 {
+      position: relative;
+      top: -28rem;
+      left: 80px
+    }
+
+    .section2-subsection3 {
+      position: relative;
+      top: -10rem
+    }
+
+    .section2-subsection3 h1 {
+      display: flex;
+      position: relative;
+      left: 12rem;
+      top: -30rem
+    }
+
+    .section2-subsection3 p {
+      display: flex;
+      position: relative;
+      left: 12rem;
+      top: -30rem
+    }
+
+    #section2-subsection3-pic1 {
+      position: relative;
+      top: 10px;
+    }
+
+    #section2-subsection3-pic2 {
+      display: flex;
+      position: relative;
+      top: -18rem;
+      left: 53rem
+    }
+
+
+    .section3 {
+      display: flex;
+      position: relative;
+      top: -10rem;
+      left: 8rem
+    }
+
+    .section3 h1 {
+      display: flex;
+      position: relative;
+      left: 22rem;
+      top: -60px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+    }
+
+    .section3 button {
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(322, 100%, 66%);
+      color: white;
+      border-radius: 20px;
+      border: 1px solid white;
+      box-shadow: 2px 2px 1px rgb(218, 215, 215);
+      height: 40px;
+      width: 20%;
+      left: 24rem
+    }
+
+    .footer-left p {
+      position: relative;
+      top: 135px;
+      float: left;
+
+    }
+
+    .footer-left p+p {
+      padding: 80px;
+    }
+
+    #footer-image {
+      max-width: 120%;
+      height: 27rem;
+      position: relative;
+      top: 1rem;
+      left: -6rem
+    }
+
+    .footer {
+      padding: 100px;
+      background-size: 100% 100%;
+      position: relative;
+
+    }
+
+    .footer-left {
+      display: flex;
+      position: absolute;
+      width: 120px;
+      color: white;
+
+    }
+
+    .footer-left p {
+      display: flex;
+      position: absolute;
+      top: -12rem;
+      width: 200%;
+      font-size: 12px;
+    }
+
+   
+    .footer-left img {
+      position: relative;
+      background-color: white;
+      border-radius: 10px;
+      top: -15rem
+    }
+
+    .footer-left-1 {
+      display: flex;
+      position: absolute;
+      top: 5rem;
+      left: 3rem;
+      width: 200%;
+      font-size: 13px;
+    }
+
+    .footer-left-1 p {
+      position: relative;
+      top: -12.5rem;
+      left: -12px
+    }
+
+    .footer-left-2 {
+      display: flex;
+      position: absolute;
+      top: 7rem;
+      left: 3.4rem;
+      width: 200%;
+      font-size: 13px;
+    }
+
+    #footer-left-image1 {
+      position: relative;
+      display: flex;
+      top: -12rem;
+      left: -2.2rem;
+      background-color: black;
+    }
+
+    #footer-left-image2 {
+      position: relative;
+      display: flex;
+      top: -11.5rem;
+      left: -2.8rem;
+      background-color: black;
+    }
+
+    .footer-right {
+      display: flex;
+      position: relative;
+      width: 200px;
+      left: 19rem;
+      top:-16rem;
+      color: white
+    }
+
+     .footer-right h1{
+      display: flex;
+      position: relative;
+      font-size: 25px;
+     }
+
+     .footer-right p{
+      display: flex;
+      position: absolute;
+      top: 40px;
+      left: -3px;
+      width: 20rem
+     }
+
+    .footer-right button {
+      display: flex;
+      position: relative;
+      top: 9.8rem;
+      left: -65px;
+      height: 2.5rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      border-radius: 10px;
+      background-color: hsl(322, 100%, 66%);
+      color: white;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img src="images/logo.svg" style="width: 10%;" />
+      <button id="header-button">Try it free</button>
+    </header>
+
+    <div class="section1">
+      <h1>Build The Community Your Fans Will Love</h1>
+
+      <p>Huddle re-imagines the way we build communities. You have a voice, but so does
+        your audience. Create connections with your users as you engage in genuine discussion.</p>
+
+      <button>Get Started For Free</button>
+      <img src="images/screen-mockups.svg" />
+      <div class="section1-subsection">
+        <div class="section1-subsection1">
+          <img src="images/icon-communities.svg" style="height: 20%;width: 10%;" />
+          <h1>1.4k+</h1>
+          <p>Communities Formed</p>
+        </div>
+        <div class="section1-subsection1">
+          <img src="images/icon-messages.svg" style="height: 20%;width: 10%;" />
+          <h1>2.7m+</h1>
+          <p>Messages Sent</p>
+        </div>
+      </div>
+    </div>
+    <div class="section2">
+      <div class="section2-subsection1">
+        <img src="images/bg-section-top-desktop-1.svg" id="section2-subsection1-pic1"
+          style="width: 100%; height: 30rem;" />
+        <img src="images/illustration-grow-together.svg" id="section2-subsection1-pic2"
+          style="height: 40%;width: 30%;" />
+        <h1>Grow Together</h1>
+        <p>Generate meaningful discussions with your audience and build a strong, loyal community.
+          Think of the insightful conversations you miss out on with a feedback form.</p>
+      </div>
+      <div class="section2-subsection2">
+        <h1>Flowing Conversations</h1>
+        <img src="images/illustration-flowing-conversation.svg" id="section2-subsection2-pic1"
+          style="height: 40%;width: 30%;" />
+        <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads have
+          just-in-time loading for a more natural flow.</p>
+      </div>
+      <div class="section2-subsection3">
+        <img src="images/bg-section-top-desktop-2.svg" id="section2-subsection3-pic1"
+          style="width: 185%; height: 25rem;" />
+        <img src="images/illustration-your-users.svg" id="section2-subsection3-pic2" style="height: 40%;width: 30%;" />
+        <h1>Your Users</h1>
+        <p>It takes no time at all to integrate Huddle with your app's authentication solution. This means,
+          once signed in to your app, your users can start chatting immediately.</p>
+      </div>
+    </div>
+    <div class="section3">
+      <h1>Ready To Build Your Community?</h1>
+      <button>Get Started For Free</button>
+    </div>
+
+    <div class="footer">
+      <img src="images/bg-footer-top-desktop.svg" id="footer-image" />
+
+      <div class="footer-left">
+        <img src="images/logo.svg" style="width: 150px; height: 40px;" />
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia
+          vestibulum a, ultrices quis sem.
+        </p>
+        <div class="footer-left-1">
+          <img id="footer-left-image1" src="images/icon-phone.svg" style="width: 8%; height: 8%" />
+          <p>Phone: +1-543-123-4567 </p>
+        </div>
+
+        <div class="footer-left-2">
+          <img id="footer-left-image2" src="images/icon-email.svg" style="width: 10%; height: 20%" />
+          <p> example@huddle.com</p>
+        </div>
+      </div>
+     
+      <div class="footer-right">
+        <h1>Newsletter</h1>
+        <p>To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never
+        send you spam or pass on your email address
+      </p>
+      <input style="height: 25px; padding-right: 50px; position: relative; top: 10rem; left: -120px"></input>
+        <button>Subscribe</button>
+      </div>
+
+      <div class="attribution">
+        <p>
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="#">Jeff Chin</a>.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>
